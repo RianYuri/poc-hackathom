@@ -2,7 +2,6 @@
 import iconFullName from "../../assets/img/iconFullName.svg"
 import "./style.scss"
 
-import React from "react";
 export const Analise = () => {
     return (
         <section className="analise__section">

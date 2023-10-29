@@ -25,12 +25,15 @@
 .analisis__chat-messages{
     max-height: 300px;
     overflow-y: scroll;
+    scroll-behavior: smooth;
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    padding-right: 5px;
 
     &::-webkit-scrollbar {
-        width: 10px;
+        width: 5px;
+        border-radius: 5px;
       }
       
       /* Track */
@@ -71,7 +74,7 @@
     border: 1px solid transparentize($color-white, .9);
     min-width: 40px;
     flex-grow: 1;
-    padding: .8rem;
+    padding: .5rem .8rem;
     border-radius: 5px;
     &::placeholder{
         color: #adadad;
@@ -85,8 +88,12 @@
     padding: .4rem;
     background: $color-send-btn;
     border-radius: 5px;
+    cursor: pointer;
     img{
         width: 30px;
+    }
+    :hover{
+        filter: brightness(1.2);
     }
 }
 
@@ -103,6 +110,9 @@
     img{
         width: 25px;
     }
+    :hover{
+        filter: brightness(1.2);
+    }
 }
 
 .analisis__chat-file{
@@ -116,4 +126,7 @@
     &::file-selector-button{
         cursor: pointer;
     }
+}
+.analisis__chat-message strong{
+    background: red;
 }
