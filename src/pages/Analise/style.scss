@@ -1,0 +1,52 @@
+@import '../../assets/sass/main.scss';
+
+.analise__section{
+    position: relative;
+    font-family: $font-outfit;
+    height: 100vh;
+    width: 100%;
+    background: url('../../assets/img/hero-bg.png') no-repeat center center / cover;
+}
+.analise__header{
+    @include container();
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 6.5rem;
+}
+
+
+.analise__header-icon{
+    height: 40px;
+}
+
+.analise__header-option-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3px;
+}
+.analise__header-option{
+   width: 5px;
+   height: 5px;
+   background-color: white;
+   border-radius: 50%;
+}
+
+
+.analise__header-user{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.analise__header-icon-user{
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    background-image: url("../../assets/img/ellipse3.svg");
+
+}
+
+  
