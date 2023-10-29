@@ -2,19 +2,23 @@
 
 .analise__section{
     position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 58px;
     font-family: $font-outfit;
     height: 100vh;
     width: 100%;
     background: url('../../assets/img/hero-bg.png') no-repeat center center / cover;
+    padding: 0 12rem;
+    padding-top: 6.5rem;
+    
+
 }
 .analise__header{
-    @include container();
-    margin: 0 auto;
-    padding: 0 2rem;
+    width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    padding-top: 6.5rem;
 }
 
 

@@ -1,8 +1,8 @@
 
 import iconFullName from "../../assets/img/iconFullName.svg"
+import AnalisisPrompt from "../../components/AnalisisPrompt";
 import "./style.scss"
 
-import React from "react";
 export const Analise = () => {
     return (
         <section className="analise__section">
@@ -18,6 +18,10 @@ export const Analise = () => {
 
                 </div>
             </header>
+            <article className="analisis__prompt">
+
+            <AnalisisPrompt />
+            </article>
         </section>
     );
 }

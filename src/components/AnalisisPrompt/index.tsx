@@ -6,7 +6,7 @@ import uploadIcon from '../../assets/img/upload-icon.png'
 const AnalisisPrompt = () => {
   const [messages, setMessages] = useState([
     {
-      text: 'Olá, sou a Adila! \n Sou uma IA treinada para identificar e sugerir correções  em petições iniciais. Utilizo uma base de dados e contextos disponíveis na internet, o que me permite identificar padrões de linguagem racista. Meu objetivo é ajudar os advogados a elaborar petições iniciais mais justas e equitativas. Como posso te ajudar? Redija sua petição ou faça upload de arquivo PDF.'
+      text: 'Olá, sou a Adila! \n Sou uma IA treinada para identificar e sugerir correções  em petições iniciais. Utilizo uma base de dados e contextos disponíveis na internet, o que me permite identificar padrões de linguagem racista. Meu objetivo é ajudar os advogados a elaborar petições iniciais mais justas e equitativas.\n Como posso te ajudar? Redija sua petição ou faça upload de arquivo PDF.'
     }
   ])
 
@@ -33,11 +33,13 @@ const AnalisisPrompt = () => {
         <div className="analisis__container">
           <div className="analisis__chat">
             <div className="analisis__chat-messages">
-              {messages.map((message, index) => (
-                <div key={index} className="analisis__chat-message">
-                  <span>{message.text}</span>
-                </div>
-              ))}
+            {messages.map((message, index) => (
+              <div key={index} className="analisis__chat-message">
+                {message.text.split('\n').map((line, i) => (
+                  <p key={i}>{line}</p>
+                ))}
+              </div>
+            ))}
             </div>
             <div className="analisis__chat-input-area">
               <div className="analisis__chat-file-area">
