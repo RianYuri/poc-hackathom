@@ -82,6 +82,9 @@ Diante do exposto, peço deferimento deste pedido para que se faça justiça e q
 Laura Santos
 [ASSINATURA]
           `
+        },
+        {
+          text: '"Denegrindo a minha imagem" pode ser considerada uma frase racista. Que tal trocar por "manchando a minha imagem"?'
         }
       ])
       setInputValue('')
@@ -97,11 +100,15 @@ Laura Santos
         <div className="analisis__container">
           <div className="analisis__chat">
             <div className="analisis__chat-messages" ref={chatRef}>
-              {messages.map((message, index) => (
-                <div key={index} className="analisis__chat-message">
-                  <span>{message.text}</span>
-                </div>
-              ))}
+            {messages.map((message, index) => (
+              <div key={index} className="analisis__chat-message">
+                <span
+                  dangerouslySetInnerHTML={{
+                    __html: message.text.replace(/<strong>(.*?)<\/strong>/g, '<span style="background-color: red;">$1</span>')
+                  }}
+                />
+              </div>
+            ))}
             </div>
             <div className="analisis__chat-input-area">
               <div className="analisis__chat-file-area">
