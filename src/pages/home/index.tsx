@@ -3,6 +3,7 @@ import headerIcon from "../../assets/img/brand-icon.png"
 import homeBrandLogo from "../../assets/img/home-brand-logo.png"
 import Footer from "../../components/Footer"
 import AnalisisPrompt from "../../components/AnalisisPrompt"
+import { Link } from "react-router-dom"
 
 export const Home = () =>{
     return(
@@ -12,10 +13,9 @@ export const Home = () =>{
                 <img className="hero__header-icon" src={headerIcon} alt="Logo superior Adila" />
                 <ul className="hero__header-links">
                     <li className="hero__header-link">
-                        Sign up
                     </li>
                     <li className="hero__header-link">
-                        Login
+                        <Link to='/Analise'>Analisar</Link>
                     </li>
                 </ul>
             </header>
