@@ -2,6 +2,7 @@ import "./style.scss"
 import headerIcon from "../../assets/img/brand-icon.png"
 import homeBrandLogo from "../../assets/img/home-brand-logo.png"
 import Footer from "../../components/Footer"
+import AnalisisPrompt from "../../components/AnalisisPrompt"
 
 export const Home = () =>{
     return(
@@ -22,6 +23,10 @@ export const Home = () =>{
             <section className="hero__section-texts">
                 <img src={homeBrandLogo} alt="Logotipo Adila" />
                 <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+            </section>
+
+            <section className="analisis__component">
+                <AnalisisPrompt/>
             </section>
         </section>
         <section className="plans__section">
