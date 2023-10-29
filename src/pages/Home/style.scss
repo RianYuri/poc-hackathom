@@ -55,7 +55,7 @@
 .hero__section-texts{
     @include container();
     position: absolute;
-    bottom: 8rem;
+    bottom: 10rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;

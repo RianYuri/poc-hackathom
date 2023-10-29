@@ -1,6 +1,7 @@
 import "./style.scss"
 import headerIcon from "../../assets/img/brand-icon.png"
 import homeBrandLogo from "../../assets/img/home-brand-logo.png"
+import Footer from "../../components/Footer"
 
 export const Home = () =>{
     return(
@@ -45,6 +46,7 @@ export const Home = () =>{
                 </article>
             </section>
         </section>
+        <Footer/>
         </>
     )
 }

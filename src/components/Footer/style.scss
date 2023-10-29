@@ -1,0 +1,26 @@
+@import '../../assets/sass/main.scss';
+
+
+.footer__section{
+    background: $color-footer-bg;
+    width: 100%;
+    .footer__container{
+        @include container();
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        img{
+            height: 40px;
+        }
+    
+        span{
+            font-family: $font-outfit;
+            color: $color-white;
+            font-size: 1.25rem;
+        }
+    }
+
+}
+
