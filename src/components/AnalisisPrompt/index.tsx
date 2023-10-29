@@ -1,5 +1,5 @@
 import './style.scss'
-import { useState, useRef } from 'react'
+import { useState, useRef,useEffect } from 'react'
 import sendMessageIcon from '../../assets/img/send-message-icon.png'
 import uploadIcon from '../../assets/img/upload-icon.png'
 
@@ -94,8 +94,21 @@ Laura Santos
         }
       }, 0)
     }
-
+    const handleModal = () => {
+      console.log('teste');
+    };
+    const addClickEvents = () => {
+      const clickableElements = document.querySelectorAll('.clickable');
+  
+      clickableElements.forEach((element) => {
+        element.addEventListener('click', handleModal);
+      });
+    };
+    useEffect(() => {
+      addClickEvents();
+    }, [])
   return (
+    <>
     <section className='analisis__section'>
         <div className="analisis__container">
           <div className="analisis__chat">
@@ -104,7 +117,7 @@ Laura Santos
               <div key={index} className="analisis__chat-message">
                 <span className='analisis__animation'
                   dangerouslySetInnerHTML={{
-                    __html: message.text.replace(/<strong>(.*?)<\/strong>/g, '<span style="background-color: red;">$1</span>')
+                    __html: message.text.replace(/<strong>(.*?)<\/strong>/g, '<span style="background-color: red;" class="clickable">$1</span>')
                   }}
                 />
               </div>
@@ -123,6 +136,7 @@ Laura Santos
           </div>
         </div>
     </section>
+    </>
   )
 }
 
